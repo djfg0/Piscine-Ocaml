@@ -55,6 +55,19 @@ let ft_test_string_all (predicate : (char -> bool)) (str : string) =
     else
         print_endline "False"
 
+(*
+    Works, but impossible to call a print function in between the different function's tests, because I don't have the functions names. Not so fan of making tuples just to store those names...
+
+let predicates = [ft_is_upper; ft_is_lower; ft_is_alpha; ft_is_digit; ft_is_alnum; ft_is_xdigit]
+let strings = ["Coucou"; "coucou"; "COUCOU"; "C"; "c"; "Coucou42"; "coucou42"; "COUCOU42"; "42"; "8"; "1337BEEF"; ""]
+
+let () =
+    List.iter
+        (fun f ->
+            List.iter (ft_test_string_all f) strings)
+        predicates
+*)
+
 (***************)
 (* ft_is_upper *)
 (***************)
