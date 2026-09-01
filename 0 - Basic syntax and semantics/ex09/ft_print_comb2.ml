@@ -6,10 +6,11 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:22:09 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:22:10 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/02 01:01:58 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
+(*
 let ft_print_comb2 () =
     let rec first_loop_tens first_tens =
         if first_tens <= 9 then
@@ -43,3 +44,27 @@ let ft_print_comb2 () =
             end
     in first_loop_tens 0;
     print_char '\n'
+*)
+
+
+let ft_print_comb2 () =
+    let rec loop first second =
+        if first < 10 then
+            print_int 0;
+        print_int first;
+        print_char ' ';
+        if second < 10 then
+            print_int 0;
+        print_int second;
+        if first <> 98 then
+            begin
+                print_char ',';
+                print_char ' ';
+                if second <> 99 then
+                    loop first (second + 1)
+                else
+                    loop (first + 1) (first + 2)
+            end
+        else
+            print_char '\n'
+    in loop 0 1
