@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:22:02 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:22:03 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/03 02:53:57 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -24,6 +24,10 @@ let () =
 let () =
     run_test 13 "abcdefghijklmnopqrstuvwxyz"
 let () =
+    run_test 26 "abcdefghijklmnopqrstuvwxyz"
+let () =
+    run_test 27 "abcdefghijklmnopqrstuvwxyz"
+let () =
     run_test 42 "0123456789"
 let () =
     run_test 2 "OI2EAS67B9"
@@ -39,6 +43,10 @@ let () =
     run_test (-13) "NOPQRSTUVWXYZABCDEFGHIJKLM"
 let () =
     run_test (-13) "nopqrstuvwxyzabcdefghijklm"
+let () =
+    run_test (-26) "nopqrstuvwxyzabcdefghijklm"
+let () =
+    run_test (-27) "nopqrstuvwxyzabcdefghijklm"
 let () =
     run_test (-1) "bcdefghijklmnopqrstuvwxyza"
 let () =
