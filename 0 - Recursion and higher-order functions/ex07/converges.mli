@@ -5,9 +5,9 @@
 (*                                                    +:+ +:+         +:+     *)
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
-(*   Created: 2026/09/03 02:41:14 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/03 02:41:15 by fguarrac         ###   ########.fr       *)
+(*   Created: 2026/09/05 17:30:55 by fguarrac          #+#    #+#             *)
+(*   Updated: 2026/09/05 17:30:56 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-val converges : (a' -> a') -> 'a -> int -> bool
+val converges : ('a -> 'a) -> 'a -> int -> bool

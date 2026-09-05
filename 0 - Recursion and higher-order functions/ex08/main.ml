@@ -5,26 +5,25 @@
 (*                                                    +:+ +:+         +:+     *)
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
-(*   Created: 2026/09/05 17:29:06 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/05 17:29:07 by fguarrac         ###   ########.fr       *)
+(*   Created: 2026/09/05 17:31:18 by fguarrac          #+#    #+#             *)
+(*   Updated: 2026/09/05 17:31:19 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let () =
-    let run_test x y z =
-        print_string "tak ";
-        print_int x;
+    let run_test (func_name : string) (func : int -> float) (lower : int) (upper : int) =
+        print_string func_name;
         print_char ' ';
-        print_int y;
+        print_int lower;
         print_char ' ';
-        print_int z;
+        print_int upper;
         print_string ": ";
-        print_int (Tak.tak x y z);
+        print_float (Ft_sum.ft_sum func lower upper);
         print_char '\n'
     in
-    run_test 1 2 3;
-    run_test 5 23 7;
-    run_test 9 1 0;
-    run_test 1 1 1;
-    run_test 0 42 0;
-    run_test 23498 98734 98776
+        run_test "fun x -> x * x" (fun x -> float_of_int (x * x)) 1 10;
+        run_test "fun x -> x * x" (fun x -> float_of_int (x * x)) 1 2;
+        run_test "fun x -> x" (fun x -> float_of_int x) 1 5;
+        run_test "fun x -> x" (fun x -> float_of_int x) (-1) (-5);
+        run_test "fun x -> x" (fun x -> float_of_int x) (-5) (-1);
+        run_test "fun x -> 2 * x" (fun x -> float_of_int (2 * x)) 1 5;

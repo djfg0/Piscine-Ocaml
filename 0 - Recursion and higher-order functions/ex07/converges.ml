@@ -5,9 +5,15 @@
 (*                                                    +:+ +:+         +:+     *)
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
-(*   Created: 2026/09/03 02:41:05 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/03 02:41:06 by fguarrac         ###   ########.fr       *)
+(*   Created: 2026/09/05 17:30:50 by fguarrac          #+#    #+#             *)
+(*   Updated: 2026/09/05 17:30:51 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let converges (func : 'a -> 'a) (x : 'a) (n : int) =
+let rec converges (func : 'a -> 'a) (x : 'a) (n : int) : bool =
+    if n < 0 then
+        false
+    else if func x = x then
+        true
+    else
+        converges func (func x) (n - 1)
