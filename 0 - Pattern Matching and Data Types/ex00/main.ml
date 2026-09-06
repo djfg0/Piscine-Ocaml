@@ -18,6 +18,7 @@ let () =
     print_encoded (Encode.encode([])) print_char;
     print_encoded (Encode.encode(["salut"; "coucou"])) print_string;
     print_encoded (Encode.encode(["salut"; "salut"; "coucou"; "coucou"])) print_string;
+    print_encoded (Encode.encode(["déjà"; "coucou"])) print_string;
     print_encoded (Encode.encode(['3'; '4'; '5'; '5'; '3'])) print_char;
     print_encoded (Encode.encode([3; 4; 5; 5; 3])) print_int;
     print_encoded (Encode.encode([3.1; 4.2; 5.3; 5.3; 3.1])) print_float;
