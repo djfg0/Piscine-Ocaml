@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/08 00:35:19 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/08 00:35:20 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/08 01:20:52 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -18,8 +18,9 @@ type nucleobase =
     | T
     | C
     | G
+    | None
 
-type nucleotide = 
+type nucleotide =
 {
     ph : phosphate;
     de : deoxyribose;
@@ -38,21 +39,18 @@ let get_nucleobase (nu_tide : nucleotide) : char =
     | C -> 'C'
     | T -> 'T'
     | G -> 'G'
+    | None -> '?'
 
-let generate_nucleotide (nu_base : char) : nucleotide option =
+let generate_nucleotide (nu_base : char) : nucleotide =
     let nucleobase = match nu_base with
-    | 'A' -> Some A
-    | 'T' -> Some T
-    | 'C' -> Some C
-    | 'G' -> Some G
+    | 'A' -> A
+    | 'T' -> T
+    | 'C' -> C
+    | 'G' -> G
     | _ -> None
     in
-    match nucleobase with
-    | Some base -> 
-        Some
         {
             ph = "phosphate";
             de = "deoxyribose";
-            nu = base
+            nu = nucleobase
         }
-    | None -> None

@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/08 00:35:24 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/08 00:35:25 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/08 01:20:24 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -18,8 +18,9 @@ type nucleobase =
     | T
     | C
     | G
+    | None
 
-val generate_nucleotide : char -> nucleotide option
+val generate_nucleotide : char -> nucleotide
 
 val get_phosphate : nucleotide -> string
 val get_deoxyribose : nucleotide -> string
