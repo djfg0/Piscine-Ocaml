@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/08 00:35:24 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/10 21:50:43 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/11 09:00:25 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -26,3 +26,4 @@ val generate_nucleotide : char -> nucleotide
 val get_phosphate : nucleotide -> string
 val get_deoxyribose : nucleotide -> string
 val get_nucleobase : nucleotide -> char
+val nucleobase_to_char : nucleobase -> char

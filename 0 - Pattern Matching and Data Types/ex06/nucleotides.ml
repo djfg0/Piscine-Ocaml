@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/08 00:35:19 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/10 19:24:59 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/11 09:01:46 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -57,3 +57,12 @@ let generate_nucleotide (nu_base : char) : nucleotide =
             de = "deoxyribose";
             nu = nucleobase
         }
+
+let nucleobase_to_char (nu_base : nucleobase) : char =
+	match nu_base with
+	| A -> 'A'
+	| C -> 'C'
+	| T -> 'T'
+	| G -> 'G'
+	| U -> 'U'
+	| None -> '?'
