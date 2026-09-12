@@ -6,26 +6,11 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:19:57 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:20:06 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 01:04:11 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-(*
-let rec ft_print_char_from_int (nbr : int) =
-	if nbr - (int_of_char 'a') = 26 then
-		print_char '\n'
-	else begin
-	    print_char (char_of_int nbr);
-		ft_print_char_from_int (nbr + 1)
-    end
-
-let ft_print_alphabet = fun () ->
-    let nbr = int_of_char 'a' in
-	ft_print_char_from_int nbr
-*)
-
-
-let ft_print_alphabet = fun () ->
+let ft_print_alphabet () : unit =
     let int_of_char_a = int_of_char 'a' in
     let int_of_char_z = int_of_char 'z' in
     let rec loop current_int_of_char =

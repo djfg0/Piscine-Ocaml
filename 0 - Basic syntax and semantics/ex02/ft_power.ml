@@ -6,11 +6,11 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:19:36 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:19:38 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 01:01:53 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let rec ft_power (nbr : int) (power : int) =
+let rec ft_power (nbr : int) (power : int) : int =
     if power = 0 then
         1
     else

@@ -6,11 +6,11 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:19:09 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:19:11 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 01:01:23 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let ft_print_int (nbr : int) = 
+let ft_print_int (nbr : int) =
     print_int nbr;
     print_char '\n'
 
@@ -21,7 +21,7 @@ let rec ft_decrement (nbr : int) =
     else
         ()
 
-let ft_countdown (nbr : int) =
+let ft_countdown (nbr : int) : unit =
     if nbr < 0 then
         ft_print_int 0
     else

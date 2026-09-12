@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:21:21 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:21:24 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 00:59:25 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -62,11 +62,7 @@ let ft_test_string_all (predicate : (char -> bool)) (str : string) =
     print_string "  Testing \"";
     print_string str;
     print_string "\": ";
-    if Ft_string_all.ft_string_all predicate str = true then
-        print_endline "True"
-    else
-        print_endline "False"
-
+	print_endline (string_of_bool (Ft_string_all.ft_string_all predicate str))
 
 let predicates =
 [
@@ -85,5 +81,5 @@ let () =
             print_string "Testing ft_string_all with ";
             print_endline name;
             List.iter (ft_test_string_all f) strings;
-            print_char '\n')
+            print_newline ())
         predicates

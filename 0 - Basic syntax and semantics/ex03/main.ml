@@ -6,8 +6,9 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:20:19 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:20:20 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 00:38:52 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let () = Ft_print_alphabet.ft_print_alphabet ()
+let () =
+	Ft_print_alphabet.ft_print_alphabet ()

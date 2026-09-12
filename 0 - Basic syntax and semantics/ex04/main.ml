@@ -6,8 +6,9 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:20:37 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/06/27 03:20:38 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 00:40:35 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-let () = Ft_print_comb.ft_print_comb ()
+let () =
+	Ft_print_comb.ft_print_comb ()
