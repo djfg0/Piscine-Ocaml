@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/08 00:35:24 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/08 01:20:24 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/14 22:06:33 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -14,11 +14,11 @@ type nucleotide
 type phosphate
 type deoxyribose
 type nucleobase =
-    | A
-    | T
-    | C
-    | G
-    | None
+	| A
+	| T
+	| C
+	| G
+	| None
 
 val generate_nucleotide : char -> nucleotide
 

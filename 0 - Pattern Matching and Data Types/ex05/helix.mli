@@ -6,11 +6,11 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/09 00:08:48 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/09 00:08:49 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/11 11:04:12 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
-type helix
+type helix = Nucleotides.nucleotide list
 
 val generate_helix : int -> helix
 val helix_to_string : helix -> string

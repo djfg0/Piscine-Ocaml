@@ -6,27 +6,35 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/07 21:01:31 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/07 21:01:32 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/15 21:01:39 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let sequence (n : int) : string =
-    let build_next_element (element : string) = 
-        let element_length = String.length element in
-        let rec build_loop (build_index : int) (repeat_counter : int) (output : string) =
-            if build_index = element_length then
-                output
-            else if (build_index + 1) < element_length && String.get element build_index = String.get element (build_index + 1) then
-                build_loop (build_index + 1) (repeat_counter + 1) output
-            else
-                build_loop (build_index + 1) 1 (output ^ (string_of_int repeat_counter) ^ (String.make 1 (String.get element build_index)))
-        in build_loop 0 1 String.empty
-    in
-    let rec sequence_loop (current_element : string) (element_index : int) =
-        if n <= 0 then
-            String.empty
-        else if element_index = (n - 1) then
-            current_element
-        else
-            sequence_loop (build_next_element current_element) (element_index + 1)
-    in sequence_loop "1" 0
+	let rec itoa (nbr : int list) (output : string): string =
+		match nbr with
+		| [] -> output
+		| first :: rest -> itoa rest (output ^ (string_of_int first))
+	in
+	if n <= 0 then
+		""
+	else
+		begin
+			let rec build_sequence (prev_element : int list) (current_element : int list) : int list =
+				let rec build_element (index : int) (counter : int) (prev : int list) (curr : int list) =
+					match prev with
+					| [] -> curr
+					| first :: second :: rest -> if first = second then
+													build_element (index + 1) (counter + 1) (second::rest) curr
+												 else
+													build_element (index + 1) 1 (second::rest) (curr @ [counter; first])
+					| first :: [] -> build_element (index + 1) 1 [] (curr @ [counter; first])
+				in build_element 1 1 prev_element current_element
+			in
+			let rec out element_index prev_element current_element =
+				match element_index with
+				| x when element_index = n -> current_element
+				| _ -> let next = build_sequence current_element []
+					   in out (element_index + 1) current_element next
+			in itoa (out 1 [1] [1]) ""
+		end
