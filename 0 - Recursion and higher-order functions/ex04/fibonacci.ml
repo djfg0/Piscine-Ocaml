@@ -6,18 +6,18 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/05 17:29:25 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/05 17:29:27 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/14 12:15:28 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let fibonacci (n : int) =
-    let rec fibonacci_acc n (index_minus_1 : int) (index_minus_2 : int) =
-        if n < 0 then
-            -1
-        else if n >= 2 then
-            fibonacci_acc (n - 1) (index_minus_1 + index_minus_2) index_minus_1
-        else if n = 0 then
-            0
-        else
-            index_minus_1 + index_minus_2
-    in fibonacci_acc n 0 1
+	let rec fibonacci_acc n (index_minus_1 : int) (index_minus_2 : int) =
+		if n < 0 then
+			-1
+		else if n >= 2 then
+			fibonacci_acc (n - 1) (index_minus_1 + index_minus_2) index_minus_1
+		else if n = 0 then
+			0
+		else
+			index_minus_1 + index_minus_2
+	in fibonacci_acc n 0 1

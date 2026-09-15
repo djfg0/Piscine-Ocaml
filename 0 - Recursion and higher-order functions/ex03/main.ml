@@ -6,25 +6,25 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/05 17:29:06 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/05 17:29:07 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/14 12:13:57 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let () =
-    let run_test x y z =
-        print_string "tak ";
-        print_int x;
-        print_char ' ';
-        print_int y;
-        print_char ' ';
-        print_int z;
-        print_string ": ";
-        print_int (Tak.tak x y z);
-        print_char '\n'
-    in
-    run_test 1 2 3;
-    run_test 5 23 7;
-    run_test 9 1 0;
-    run_test 1 1 1;
-    run_test 0 42 0;
-    run_test 23498 98734 98776
+	let run_test x y z =
+		print_string "tak ";
+		print_int x;
+		print_char ' ';
+		print_int y;
+		print_char ' ';
+		print_int z;
+		print_string ": ";
+		print_int (Tak.tak x y z);
+		print_char '\n'
+	in
+		run_test 1 2 3;
+		run_test 5 23 7;
+		run_test 9 1 0;
+		run_test 1 1 1;
+		run_test 0 42 0;
+		run_test 23498 98734 98776

@@ -6,12 +6,12 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/05 17:29:13 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/05 17:29:14 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/14 12:14:46 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let rec tak (x : int) (y : int) (z : int) =
-    if y < x then
-        tak (tak (x - 1) y z) (tak (y - 1) z x) (tak (z - 1) x y)
-    else
-        z
+	if y < x then
+		tak (tak (x - 1) y z) (tak (y - 1) z x) (tak (z - 1) x y)
+	else
+		z

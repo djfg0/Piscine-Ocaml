@@ -6,26 +6,22 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/09/05 17:30:17 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/05 17:30:18 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/14 12:45:59 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
 let () =
-    print_string "hfs_m -1: ";
-    print_int (Hofstadter_mf.hfs_m (-1));
-    print_char '\n';
-    print_string "hfs_f -1: ";
-    print_int (Hofstadter_mf.hfs_f (-1));
-    print_char '\n';
-    print_string "hfs_m 0: ";
-    print_int (Hofstadter_mf.hfs_m 0);
-    print_char '\n';
-    print_string "hfs_f 0: ";
-    print_int (Hofstadter_mf.hfs_f 0);
-    print_char '\n';
-    print_string "hfs_m 4: ";
-    print_int (Hofstadter_mf.hfs_m 4);
-    print_char '\n';
-    print_string "hfs_f 4: ";
-    print_int (Hofstadter_mf.hfs_f 4);
-    print_char '\n'
+	let run_test (func : string) (f : int -> int) (nbr : int) =
+		print_string func;
+		print_string " ";
+		print_int nbr;
+		print_string ": ";
+		print_int (f nbr);
+		print_newline ();
+	in
+		run_test "hfs_m" Hofstadter_mf.hfs_m (-1);
+		run_test "hfs_f" Hofstadter_mf.hfs_f (-1);
+		run_test "hfs_m" Hofstadter_mf.hfs_m 0;
+		run_test "hfs_f" Hofstadter_mf.hfs_f 0;
+		run_test "hfs_m" Hofstadter_mf.hfs_m 4;
+		run_test "hfs_f" Hofstadter_mf.hfs_f 4;
