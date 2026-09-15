@@ -6,7 +6,7 @@
 (*   By: fguarrac <fguarrac@student.42.fr>          +#+  +:+       +#+        *)
 (*                                                +#+#+#+#+#+   +#+           *)
 (*   Created: 2026/06/27 03:21:49 by fguarrac          #+#    #+#             *)
-(*   Updated: 2026/09/13 01:14:28 by fguarrac         ###   ########.fr       *)
+(*   Updated: 2026/09/13 16:15:37 by fguarrac         ###   ########.fr       *)
 (*                                                                            *)
 (* ************************************************************************** *)
 
@@ -32,6 +32,8 @@ let rec rot (n : int)(c : char) =
         c
     else if n < 0 then
         rot (26 + n) c
+    else if n > 26 then
+        rot (n - 26) c
     else if ft_is_lower c then
         let new_int_of_param = (int_of_param + n) in
         if new_int_of_param > int_of_z then
